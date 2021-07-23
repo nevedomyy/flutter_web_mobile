@@ -37,6 +37,9 @@ class AppNavigator extends RouterDelegate<AppConfig>
     if (uri.pathSegments.length == 1) {
       if (configuration.id != null) {
         if (uri.pathSegments[0].startsWith('details')) {
+          if (_pages.length > 1 && _pages[1].name!.contains('/details')) {
+            _pages.removeLast();
+          }
           _pages
               .add(AppRoutes.getPage('/details', arguments: configuration.id));
         }

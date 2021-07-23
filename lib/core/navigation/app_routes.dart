@@ -29,7 +29,7 @@ class AppRoutes {
         );
     }
     return MaterialPage(
-      key: ValueKey(page),
+      key: ValueKey('$page/$arguments'),
       name: page,
       child: pageClass,
       arguments: arguments,

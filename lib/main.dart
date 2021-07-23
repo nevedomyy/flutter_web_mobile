@@ -6,7 +6,7 @@ import 'core/injections/injection.dart';
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   // It is safe to call this function when running on mobile or desktop as well.
-  setPathUrlStrategy();
+  // setPathUrlStrategy();
   await configureDependencies();
   runApp(const App());
 }
