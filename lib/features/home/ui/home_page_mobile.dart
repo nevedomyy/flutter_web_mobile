@@ -69,7 +69,7 @@ class _HomePageMobileState extends State<HomePageMobile> {
                           width: 100,
                           height: 160,
                           child: Image(
-                            image: NetworkImage(IMAGE_PATH +
+                            image: NetworkImage(EndPoints.imagePath +
                                 state.movies.results![index].posterPath!),
                             fit: BoxFit.cover,
                           ),

@@ -30,8 +30,6 @@ class _HomePageWebState extends State<HomePageWeb> {
         child: Container(
           width: 800,
           constraints: const BoxConstraints(
-            // maxWidth: 800,
-            // minWidth: 600,
             minHeight: double.infinity,
           ),
           decoration: const BoxDecoration(
@@ -69,7 +67,7 @@ class _HomePageWebState extends State<HomePageWeb> {
                           child: Stack(
                             children: [
                               Image(
-                                image: NetworkImage(IMAGE_PATH +
+                                image: NetworkImage(EndPoints.imagePath +
                                     state.movies.results![itemIndex]
                                         .backdropPath!),
                                 fit: BoxFit.cover,
@@ -146,12 +144,12 @@ class _HomePageWebState extends State<HomePageWeb> {
                                 width: 100,
                                 height: 160,
                                 child: Hero(
-                                  tag: IMAGE_PATH +
+                                  tag: EndPoints.imagePath +
                                       (state.movies.results?[index]
                                               .posterPath ??
                                           ''),
                                   child: Image(
-                                    image: NetworkImage(IMAGE_PATH +
+                                    image: NetworkImage(EndPoints.imagePath +
                                         state.movies.results![index]
                                             .posterPath!),
                                     fit: BoxFit.cover,

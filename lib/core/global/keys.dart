@@ -1,4 +1,4 @@
-import 'package:flutter/material.dart';
+import 'package:flutter/material.dart' show GlobalKey, NavigatorState;
 
 class Keys {
   Keys._();

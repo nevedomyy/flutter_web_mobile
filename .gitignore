@@ -45,4 +45,3 @@ app.*.map.json
 /android/app/profile
 /android/app/release
 /lib/core/global/api_key.dart
-/lib/core/api/api_provider.g.dart

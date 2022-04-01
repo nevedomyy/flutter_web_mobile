@@ -1,5 +1,11 @@
-const String IMAGE_PATH = 'https://image.tmdb.org/t/p/w500';
+class EndPoints {
+  EndPoints._();
 
-const String BASE_URL = 'https://api.themoviedb.org/3/movie/';
-const String PLAYING_MOVIES = 'now_playing';
-const String UPCOMING_MOVIES = 'upcoming';
+  static const baseUrl = 'https://api.themoviedb.org/3/movie';
+
+  static const imagePath = 'https://image.tmdb.org/t/p/w500';
+
+  static const playingMovies = '/now_playing';
+
+  static const upcomingMovies = '/upcoming';
+}

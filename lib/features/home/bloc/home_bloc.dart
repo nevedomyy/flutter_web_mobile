@@ -15,7 +15,7 @@ class HomeBloc extends Cubit<HomeState> {
     final data = await repository.fetchData();
     if (data.object != null) {
       emit(HomeLoadedState(movies: data.object));
-    } else {
+    } else if (data.errorMessage.isNotEmpty) {
       emit(HomeErrorState(message: data.errorMessage));
     }
   }

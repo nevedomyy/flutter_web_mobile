@@ -68,7 +68,8 @@ class _DetailsPageMobileState extends State<DetailsPageMobile> {
             return Column(
               children: [
                 Image(
-                  image: NetworkImage(IMAGE_PATH + state.movie.backdropPath!),
+                  image: NetworkImage(
+                      EndPoints.imagePath + state.movie.backdropPath!),
                   fit: BoxFit.fitWidth,
                 ),
                 Expanded(

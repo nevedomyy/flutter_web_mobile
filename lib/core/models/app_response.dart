@@ -1,21 +1,20 @@
-import 'dart:io';
+import 'dart:io' show SocketException;
 
-import 'package:dio/dio.dart';
-import 'package:equatable/equatable.dart';
+import 'package:dio/dio.dart' show DioError, DioErrorType;
 import 'package:flutter_web/core/services/logger.dart';
 
-class AppResponse extends Equatable {
-  final Object? object;
-  final String? errorMessage;
+class AppResponse {
+  final dynamic object;
+  final String errorMessage;
 
-  const AppResponse({this.object, this.errorMessage});
+  const AppResponse({this.object, this.errorMessage = ''});
 
-  factory AppResponse.success(Object? object) {
-    return AppResponse(object: object, errorMessage: null);
+  factory AppResponse.success(dynamic object) {
+    return AppResponse(object: object);
   }
 
   factory AppResponse.withError(Exception e, StackTrace s) {
-    String error = 'Error';
+    late final String error;
     if (e is DioError) {
       switch (e.type) {
         case DioErrorType.cancel:
@@ -27,27 +26,26 @@ class AppResponse extends Equatable {
         case DioErrorType.receiveTimeout:
           error = "Receive timeout in connection";
           break;
-        // case DioErrorType.response:
-        //   error = "Received invalid status code: ${e.response!.statusCode}";
-        //   break;
         case DioErrorType.sendTimeout:
           error = "Receive timeout in send request";
           break;
         case DioErrorType.other:
-          if (e.error is SocketException) error = 'Check network connection';
-          if (e.error is FormatException) error = 'Format problem';
+          if (e.error is SocketException) {
+            error = 'Check network connection';
+          } else if (e.error is FormatException) {
+            error = 'Format problem';
+          } else {
+            error = e.message;
+          }
           break;
-        // default:
-        //   error = e.error?.toString() ?? 'Error';
+        case DioErrorType.response:
+        default:
+          error = e.message;
       }
+    } else {
+      error = e.toString();
     }
-    if (e is SocketException) error = 'Check network connection';
-    if (e is FormatException) error = 'Format problem';
-    //getIt<Crashlytics>().error(e, s);
     log.w(error);
-    return AppResponse(object: null, errorMessage: error);
+    return AppResponse(errorMessage: error);
   }
-
-  @override
-  List<Object?> get props => [object, errorMessage];
 }

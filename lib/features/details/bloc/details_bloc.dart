@@ -15,7 +15,7 @@ class DetailsBloc extends Cubit<DetailsState> {
     final data = await repository.fetchData(id);
     if (data.object != null) {
       emit(DetailsLoadedState(movie: data.object));
-    } else {
+    } else if (data.errorMessage.isNotEmpty) {
       emit(DetailsErrorState(message: data.errorMessage));
     }
   }

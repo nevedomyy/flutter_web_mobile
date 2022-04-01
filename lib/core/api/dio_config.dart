@@ -1,33 +1,24 @@
-import 'package:dio/dio.dart';
-import 'package:flutter_web/core/services/logger.dart';
+import 'package:dio/dio.dart' show BaseOptions, Dio;
+import 'package:flutter_web/core/api/end_points.dart';
+
+import 'dio_interceptors.dart';
 
 class DioConfig {
   static Dio? _dio;
 
   DioConfig._();
 
-  static Dio? instance() {
-    if (_dio == null) {
-      _dio = Dio(
-        BaseOptions(
-          connectTimeout: 8000,
-          receiveTimeout: 5000,
-          followRedirects: false,
-        ),
-      );
-      _dio!.interceptors.add(
-        InterceptorsWrapper(
-          onResponse: (response, handler) async {
-            log.i('${response.requestOptions.path}\n${response.data}');
-            return handler.next(response);
-          },
-          onError: (error, handler) async {
-            //...
-            return handler.next(error);
-          },
-        ),
-      );
-    }
-    return _dio;
+  static Dio instance() {
+    return _dio ??= Dio(
+      BaseOptions(
+        baseUrl: EndPoints.baseUrl,
+        connectTimeout: 8000,
+        receiveTimeout: 5000,
+        followRedirects: false,
+      ),
+    )..interceptors.addAll([
+        ApiKeyInterceptor(),
+        LoggerInterceptor(),
+      ]);
   }
 }

@@ -29,8 +29,6 @@ class _DetailsPageWebState extends State<DetailsPageWeb> {
         child: Container(
           width: 800,
           constraints: const BoxConstraints(
-            // maxWidth: 800,
-            // minWidth: 600,
             minHeight: double.infinity,
           ),
           decoration: const BoxDecoration(
@@ -57,10 +55,11 @@ class _DetailsPageWebState extends State<DetailsPageWeb> {
                       SizedBox(
                         width: 400,
                         child: Hero(
-                          tag: IMAGE_PATH + (state.movie.posterPath ?? ''),
+                          tag: EndPoints.imagePath +
+                              (state.movie.posterPath ?? ''),
                           child: Image(
                             image: NetworkImage(
-                                IMAGE_PATH + state.movie.posterPath!),
+                                EndPoints.imagePath + state.movie.posterPath!),
                             fit: BoxFit.fitWidth,
                           ),
                         ),

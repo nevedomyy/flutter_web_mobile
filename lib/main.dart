@@ -1,12 +1,12 @@
-import 'package:flutter/material.dart';
+import 'package:flutter/material.dart' show WidgetsFlutterBinding, runApp;
 import 'package:url_strategy/url_strategy.dart';
+
 import 'core/app.dart';
 import 'core/injections/injection.dart';
 
-void main() async {
+void main() {
   WidgetsFlutterBinding.ensureInitialized();
-  // It is safe to call this function when running on mobile or desktop as well.
-  // setPathUrlStrategy();
-  await configureDependencies();
+  setPathUrlStrategy();
+  configureDependencies();
   runApp(const App());
 }

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-import 'navigation/app_route_information_parser.dart';
 import 'navigation/app_navigator.dart';
+import 'navigation/app_route_information_parser.dart';
 
 class App extends StatelessWidget {
   const App({Key? key}) : super(key: key);
