@@ -23,7 +23,7 @@ class _$MoviesTearOff {
   _Movies call(
       {@JsonKey(name: 'dates') Dates? dates,
       @JsonKey(name: 'page') int? page,
-      @JsonKey(name: 'results') List<Results>? results,
+      @JsonKey(name: 'results') List<Results> results = const [],
       @JsonKey(name: 'total_pages') int? totalPages,
       @JsonKey(name: 'total_results') int? totalResults}) {
     return _Movies(
@@ -50,7 +50,7 @@ mixin _$Movies {
   @JsonKey(name: 'page')
   int? get page => throw _privateConstructorUsedError;
   @JsonKey(name: 'results')
-  List<Results>? get results => throw _privateConstructorUsedError;
+  List<Results> get results => throw _privateConstructorUsedError;
   @JsonKey(name: 'total_pages')
   int? get totalPages => throw _privateConstructorUsedError;
   @JsonKey(name: 'total_results')
@@ -68,7 +68,7 @@ abstract class $MoviesCopyWith<$Res> {
   $Res call(
       {@JsonKey(name: 'dates') Dates? dates,
       @JsonKey(name: 'page') int? page,
-      @JsonKey(name: 'results') List<Results>? results,
+      @JsonKey(name: 'results') List<Results> results,
       @JsonKey(name: 'total_pages') int? totalPages,
       @JsonKey(name: 'total_results') int? totalResults});
 
@@ -103,7 +103,7 @@ class _$MoviesCopyWithImpl<$Res> implements $MoviesCopyWith<$Res> {
       results: results == freezed
           ? _value.results
           : results // ignore: cast_nullable_to_non_nullable
-              as List<Results>?,
+              as List<Results>,
       totalPages: totalPages == freezed
           ? _value.totalPages
           : totalPages // ignore: cast_nullable_to_non_nullable
@@ -135,7 +135,7 @@ abstract class _$MoviesCopyWith<$Res> implements $MoviesCopyWith<$Res> {
   $Res call(
       {@JsonKey(name: 'dates') Dates? dates,
       @JsonKey(name: 'page') int? page,
-      @JsonKey(name: 'results') List<Results>? results,
+      @JsonKey(name: 'results') List<Results> results,
       @JsonKey(name: 'total_pages') int? totalPages,
       @JsonKey(name: 'total_results') int? totalResults});
 
@@ -172,7 +172,7 @@ class __$MoviesCopyWithImpl<$Res> extends _$MoviesCopyWithImpl<$Res>
       results: results == freezed
           ? _value.results
           : results // ignore: cast_nullable_to_non_nullable
-              as List<Results>?,
+              as List<Results>,
       totalPages: totalPages == freezed
           ? _value.totalPages
           : totalPages // ignore: cast_nullable_to_non_nullable
@@ -191,7 +191,7 @@ class _$_Movies implements _Movies {
   _$_Movies(
       {@JsonKey(name: 'dates') this.dates,
       @JsonKey(name: 'page') this.page,
-      @JsonKey(name: 'results') this.results,
+      @JsonKey(name: 'results') this.results = const [],
       @JsonKey(name: 'total_pages') this.totalPages,
       @JsonKey(name: 'total_results') this.totalResults});
 
@@ -206,7 +206,7 @@ class _$_Movies implements _Movies {
   final int? page;
   @override
   @JsonKey(name: 'results')
-  final List<Results>? results;
+  final List<Results> results;
   @override
   @JsonKey(name: 'total_pages')
   final int? totalPages;
@@ -262,7 +262,7 @@ abstract class _Movies implements Movies {
   factory _Movies(
       {@JsonKey(name: 'dates') Dates? dates,
       @JsonKey(name: 'page') int? page,
-      @JsonKey(name: 'results') List<Results>? results,
+      @JsonKey(name: 'results') List<Results> results,
       @JsonKey(name: 'total_pages') int? totalPages,
       @JsonKey(name: 'total_results') int? totalResults}) = _$_Movies;
 
@@ -276,7 +276,7 @@ abstract class _Movies implements Movies {
   int? get page => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'results')
-  List<Results>? get results => throw _privateConstructorUsedError;
+  List<Results> get results => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'total_pages')
   int? get totalPages => throw _privateConstructorUsedError;

@@ -24,7 +24,7 @@ class _$MovieTearOff {
       {@JsonKey(name: 'adult')
           bool? adult,
       @JsonKey(name: 'backdrop_path')
-          String? backdropPath,
+          String backdropPath = '',
       @JsonKey(name: 'belongs_to_collection')
           Object? belongsToCollection,
       @JsonKey(name: 'budget')
@@ -42,11 +42,11 @@ class _$MovieTearOff {
       @JsonKey(name: 'original_title')
           String? originalTitle,
       @JsonKey(name: 'overview')
-          String? overview,
+          String overview = '',
       @JsonKey(name: 'popularity')
           double? popularity,
       @JsonKey(name: 'poster_path')
-          String? posterPath,
+          String posterPath = '',
       @JsonKey(name: 'production_companies')
           List<ProductionCompanies>? productionCompanies,
       @JsonKey(name: 'production_countries')
@@ -64,7 +64,7 @@ class _$MovieTearOff {
       @JsonKey(name: 'tagline')
           String? tagline,
       @JsonKey(name: 'title')
-          String? title,
+          String title = '',
       @JsonKey(name: 'video')
           bool? video,
       @JsonKey(name: 'vote_average')
@@ -113,7 +113,7 @@ mixin _$Movie {
   @JsonKey(name: 'adult')
   bool? get adult => throw _privateConstructorUsedError;
   @JsonKey(name: 'backdrop_path')
-  String? get backdropPath => throw _privateConstructorUsedError;
+  String get backdropPath => throw _privateConstructorUsedError;
   @JsonKey(name: 'belongs_to_collection')
   Object? get belongsToCollection => throw _privateConstructorUsedError;
   @JsonKey(name: 'budget')
@@ -131,11 +131,11 @@ mixin _$Movie {
   @JsonKey(name: 'original_title')
   String? get originalTitle => throw _privateConstructorUsedError;
   @JsonKey(name: 'overview')
-  String? get overview => throw _privateConstructorUsedError;
+  String get overview => throw _privateConstructorUsedError;
   @JsonKey(name: 'popularity')
   double? get popularity => throw _privateConstructorUsedError;
   @JsonKey(name: 'poster_path')
-  String? get posterPath => throw _privateConstructorUsedError;
+  String get posterPath => throw _privateConstructorUsedError;
   @JsonKey(name: 'production_companies')
   List<ProductionCompanies>? get productionCompanies =>
       throw _privateConstructorUsedError;
@@ -156,7 +156,7 @@ mixin _$Movie {
   @JsonKey(name: 'tagline')
   String? get tagline => throw _privateConstructorUsedError;
   @JsonKey(name: 'title')
-  String? get title => throw _privateConstructorUsedError;
+  String get title => throw _privateConstructorUsedError;
   @JsonKey(name: 'video')
   bool? get video => throw _privateConstructorUsedError;
   @JsonKey(name: 'vote_average')
@@ -177,7 +177,7 @@ abstract class $MovieCopyWith<$Res> {
       {@JsonKey(name: 'adult')
           bool? adult,
       @JsonKey(name: 'backdrop_path')
-          String? backdropPath,
+          String backdropPath,
       @JsonKey(name: 'belongs_to_collection')
           Object? belongsToCollection,
       @JsonKey(name: 'budget')
@@ -195,11 +195,11 @@ abstract class $MovieCopyWith<$Res> {
       @JsonKey(name: 'original_title')
           String? originalTitle,
       @JsonKey(name: 'overview')
-          String? overview,
+          String overview,
       @JsonKey(name: 'popularity')
           double? popularity,
       @JsonKey(name: 'poster_path')
-          String? posterPath,
+          String posterPath,
       @JsonKey(name: 'production_companies')
           List<ProductionCompanies>? productionCompanies,
       @JsonKey(name: 'production_countries')
@@ -217,7 +217,7 @@ abstract class $MovieCopyWith<$Res> {
       @JsonKey(name: 'tagline')
           String? tagline,
       @JsonKey(name: 'title')
-          String? title,
+          String title,
       @JsonKey(name: 'video')
           bool? video,
       @JsonKey(name: 'vote_average')
@@ -270,7 +270,7 @@ class _$MovieCopyWithImpl<$Res> implements $MovieCopyWith<$Res> {
       backdropPath: backdropPath == freezed
           ? _value.backdropPath
           : backdropPath // ignore: cast_nullable_to_non_nullable
-              as String?,
+              as String,
       belongsToCollection: belongsToCollection == freezed
           ? _value.belongsToCollection
           : belongsToCollection,
@@ -305,7 +305,7 @@ class _$MovieCopyWithImpl<$Res> implements $MovieCopyWith<$Res> {
       overview: overview == freezed
           ? _value.overview
           : overview // ignore: cast_nullable_to_non_nullable
-              as String?,
+              as String,
       popularity: popularity == freezed
           ? _value.popularity
           : popularity // ignore: cast_nullable_to_non_nullable
@@ -313,7 +313,7 @@ class _$MovieCopyWithImpl<$Res> implements $MovieCopyWith<$Res> {
       posterPath: posterPath == freezed
           ? _value.posterPath
           : posterPath // ignore: cast_nullable_to_non_nullable
-              as String?,
+              as String,
       productionCompanies: productionCompanies == freezed
           ? _value.productionCompanies
           : productionCompanies // ignore: cast_nullable_to_non_nullable
@@ -349,7 +349,7 @@ class _$MovieCopyWithImpl<$Res> implements $MovieCopyWith<$Res> {
       title: title == freezed
           ? _value.title
           : title // ignore: cast_nullable_to_non_nullable
-              as String?,
+              as String,
       video: video == freezed
           ? _value.video
           : video // ignore: cast_nullable_to_non_nullable
@@ -375,7 +375,7 @@ abstract class _$MovieCopyWith<$Res> implements $MovieCopyWith<$Res> {
       {@JsonKey(name: 'adult')
           bool? adult,
       @JsonKey(name: 'backdrop_path')
-          String? backdropPath,
+          String backdropPath,
       @JsonKey(name: 'belongs_to_collection')
           Object? belongsToCollection,
       @JsonKey(name: 'budget')
@@ -393,11 +393,11 @@ abstract class _$MovieCopyWith<$Res> implements $MovieCopyWith<$Res> {
       @JsonKey(name: 'original_title')
           String? originalTitle,
       @JsonKey(name: 'overview')
-          String? overview,
+          String overview,
       @JsonKey(name: 'popularity')
           double? popularity,
       @JsonKey(name: 'poster_path')
-          String? posterPath,
+          String posterPath,
       @JsonKey(name: 'production_companies')
           List<ProductionCompanies>? productionCompanies,
       @JsonKey(name: 'production_countries')
@@ -415,7 +415,7 @@ abstract class _$MovieCopyWith<$Res> implements $MovieCopyWith<$Res> {
       @JsonKey(name: 'tagline')
           String? tagline,
       @JsonKey(name: 'title')
-          String? title,
+          String title,
       @JsonKey(name: 'video')
           bool? video,
       @JsonKey(name: 'vote_average')
@@ -469,7 +469,7 @@ class __$MovieCopyWithImpl<$Res> extends _$MovieCopyWithImpl<$Res>
       backdropPath: backdropPath == freezed
           ? _value.backdropPath
           : backdropPath // ignore: cast_nullable_to_non_nullable
-              as String?,
+              as String,
       belongsToCollection: belongsToCollection == freezed
           ? _value.belongsToCollection
           : belongsToCollection,
@@ -504,7 +504,7 @@ class __$MovieCopyWithImpl<$Res> extends _$MovieCopyWithImpl<$Res>
       overview: overview == freezed
           ? _value.overview
           : overview // ignore: cast_nullable_to_non_nullable
-              as String?,
+              as String,
       popularity: popularity == freezed
           ? _value.popularity
           : popularity // ignore: cast_nullable_to_non_nullable
@@ -512,7 +512,7 @@ class __$MovieCopyWithImpl<$Res> extends _$MovieCopyWithImpl<$Res>
       posterPath: posterPath == freezed
           ? _value.posterPath
           : posterPath // ignore: cast_nullable_to_non_nullable
-              as String?,
+              as String,
       productionCompanies: productionCompanies == freezed
           ? _value.productionCompanies
           : productionCompanies // ignore: cast_nullable_to_non_nullable
@@ -548,7 +548,7 @@ class __$MovieCopyWithImpl<$Res> extends _$MovieCopyWithImpl<$Res>
       title: title == freezed
           ? _value.title
           : title // ignore: cast_nullable_to_non_nullable
-              as String?,
+              as String,
       video: video == freezed
           ? _value.video
           : video // ignore: cast_nullable_to_non_nullable
@@ -570,7 +570,7 @@ class __$MovieCopyWithImpl<$Res> extends _$MovieCopyWithImpl<$Res>
 class _$_Movie implements _Movie {
   _$_Movie(
       {@JsonKey(name: 'adult') this.adult,
-      @JsonKey(name: 'backdrop_path') this.backdropPath,
+      @JsonKey(name: 'backdrop_path') this.backdropPath = '',
       @JsonKey(name: 'belongs_to_collection') this.belongsToCollection,
       @JsonKey(name: 'budget') this.budget,
       @JsonKey(name: 'genres') this.genres,
@@ -579,9 +579,9 @@ class _$_Movie implements _Movie {
       @JsonKey(name: 'imdb_id') this.imdbId,
       @JsonKey(name: 'original_language') this.originalLanguage,
       @JsonKey(name: 'original_title') this.originalTitle,
-      @JsonKey(name: 'overview') this.overview,
+      @JsonKey(name: 'overview') this.overview = '',
       @JsonKey(name: 'popularity') this.popularity,
-      @JsonKey(name: 'poster_path') this.posterPath,
+      @JsonKey(name: 'poster_path') this.posterPath = '',
       @JsonKey(name: 'production_companies') this.productionCompanies,
       @JsonKey(name: 'production_countries') this.productionCountries,
       @JsonKey(name: 'release_date') this.releaseDate,
@@ -590,7 +590,7 @@ class _$_Movie implements _Movie {
       @JsonKey(name: 'spoken_languages') this.spokenLanguages,
       @JsonKey(name: 'status') this.status,
       @JsonKey(name: 'tagline') this.tagline,
-      @JsonKey(name: 'title') this.title,
+      @JsonKey(name: 'title') this.title = '',
       @JsonKey(name: 'video') this.video,
       @JsonKey(name: 'vote_average') this.voteAverage,
       @JsonKey(name: 'vote_count') this.voteCount});
@@ -603,7 +603,7 @@ class _$_Movie implements _Movie {
   final bool? adult;
   @override
   @JsonKey(name: 'backdrop_path')
-  final String? backdropPath;
+  final String backdropPath;
   @override
   @JsonKey(name: 'belongs_to_collection')
   final Object? belongsToCollection;
@@ -630,13 +630,13 @@ class _$_Movie implements _Movie {
   final String? originalTitle;
   @override
   @JsonKey(name: 'overview')
-  final String? overview;
+  final String overview;
   @override
   @JsonKey(name: 'popularity')
   final double? popularity;
   @override
   @JsonKey(name: 'poster_path')
-  final String? posterPath;
+  final String posterPath;
   @override
   @JsonKey(name: 'production_companies')
   final List<ProductionCompanies>? productionCompanies;
@@ -663,7 +663,7 @@ class _$_Movie implements _Movie {
   final String? tagline;
   @override
   @JsonKey(name: 'title')
-  final String? title;
+  final String title;
   @override
   @JsonKey(name: 'video')
   final bool? video;
@@ -797,7 +797,7 @@ abstract class _Movie implements Movie {
       {@JsonKey(name: 'adult')
           bool? adult,
       @JsonKey(name: 'backdrop_path')
-          String? backdropPath,
+          String backdropPath,
       @JsonKey(name: 'belongs_to_collection')
           Object? belongsToCollection,
       @JsonKey(name: 'budget')
@@ -815,11 +815,11 @@ abstract class _Movie implements Movie {
       @JsonKey(name: 'original_title')
           String? originalTitle,
       @JsonKey(name: 'overview')
-          String? overview,
+          String overview,
       @JsonKey(name: 'popularity')
           double? popularity,
       @JsonKey(name: 'poster_path')
-          String? posterPath,
+          String posterPath,
       @JsonKey(name: 'production_companies')
           List<ProductionCompanies>? productionCompanies,
       @JsonKey(name: 'production_countries')
@@ -837,7 +837,7 @@ abstract class _Movie implements Movie {
       @JsonKey(name: 'tagline')
           String? tagline,
       @JsonKey(name: 'title')
-          String? title,
+          String title,
       @JsonKey(name: 'video')
           bool? video,
       @JsonKey(name: 'vote_average')
@@ -852,7 +852,7 @@ abstract class _Movie implements Movie {
   bool? get adult => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'backdrop_path')
-  String? get backdropPath => throw _privateConstructorUsedError;
+  String get backdropPath => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'belongs_to_collection')
   Object? get belongsToCollection => throw _privateConstructorUsedError;
@@ -879,13 +879,13 @@ abstract class _Movie implements Movie {
   String? get originalTitle => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'overview')
-  String? get overview => throw _privateConstructorUsedError;
+  String get overview => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'popularity')
   double? get popularity => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'poster_path')
-  String? get posterPath => throw _privateConstructorUsedError;
+  String get posterPath => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'production_companies')
   List<ProductionCompanies>? get productionCompanies =>
@@ -915,7 +915,7 @@ abstract class _Movie implements Movie {
   String? get tagline => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'title')
-  String? get title => throw _privateConstructorUsedError;
+  String get title => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'video')
   bool? get video => throw _privateConstructorUsedError;

@@ -5,8 +5,6 @@
 - dio
 - retrofit
 - get_it
-- logger
-- flutter_lints
 - navigator 2.0
 
 

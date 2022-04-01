@@ -12,8 +12,8 @@ _$_Movies _$_$_MoviesFromJson(Map<String, dynamic> json) {
         ? null
         : Dates.fromJson(json['dates'] as Map<String, dynamic>),
     page: json['page'] as int?,
-    results: (json['results'] as List<dynamic>?)
-        ?.map((e) => Results.fromJson(e as Map<String, dynamic>))
+    results: (json['results'] as List<dynamic>)
+        .map((e) => Results.fromJson(e as Map<String, dynamic>))
         .toList(),
     totalPages: json['total_pages'] as int?,
     totalResults: json['total_results'] as int?,

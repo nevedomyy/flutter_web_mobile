@@ -12,7 +12,7 @@ part 'movie.g.dart';
 class Movie with _$Movie {
   factory Movie({
     @JsonKey(name: 'adult') bool? adult,
-    @JsonKey(name: 'backdrop_path') String? backdropPath,
+    @Default('') @JsonKey(name: 'backdrop_path') String backdropPath,
     @JsonKey(name: 'belongs_to_collection') Object? belongsToCollection,
     @JsonKey(name: 'budget') int? budget,
     @JsonKey(name: 'genres') List<Genres>? genres,
@@ -21,9 +21,9 @@ class Movie with _$Movie {
     @JsonKey(name: 'imdb_id') String? imdbId,
     @JsonKey(name: 'original_language') String? originalLanguage,
     @JsonKey(name: 'original_title') String? originalTitle,
-    @JsonKey(name: 'overview') String? overview,
+    @Default('') @JsonKey(name: 'overview') String overview,
     @JsonKey(name: 'popularity') double? popularity,
-    @JsonKey(name: 'poster_path') String? posterPath,
+    @Default('') @JsonKey(name: 'poster_path') String posterPath,
     @JsonKey(name: 'production_companies')
         List<ProductionCompanies>? productionCompanies,
     @JsonKey(name: 'production_countries')
@@ -34,7 +34,7 @@ class Movie with _$Movie {
     @JsonKey(name: 'spoken_languages') List<SpokenLanguages>? spokenLanguages,
     @JsonKey(name: 'status') String? status,
     @JsonKey(name: 'tagline') String? tagline,
-    @JsonKey(name: 'title') String? title,
+    @Default('') @JsonKey(name: 'title') String title,
     @JsonKey(name: 'video') bool? video,
     @JsonKey(name: 'vote_average') double? voteAverage,
     @JsonKey(name: 'vote_count') int? voteCount,

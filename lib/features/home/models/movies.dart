@@ -11,7 +11,7 @@ class Movies with _$Movies {
   factory Movies({
     @JsonKey(name: 'dates') Dates? dates,
     @JsonKey(name: 'page') int? page,
-    @JsonKey(name: 'results') List<Results>? results,
+    @Default([]) @JsonKey(name: 'results') List<Results> results,
     @JsonKey(name: 'total_pages') int? totalPages,
     @JsonKey(name: 'total_results') int? totalResults,
   }) = _Movies;

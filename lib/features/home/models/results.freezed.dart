@@ -22,18 +22,18 @@ class _$ResultsTearOff {
 
   _Results call(
       {@JsonKey(name: 'adult') bool? adult,
-      @JsonKey(name: 'backdrop_path') String? backdropPath,
+      @JsonKey(name: 'backdrop_path') String? backdropPath = '',
       @JsonKey(name: 'genre_ids') List<int>? genreIds,
       @JsonKey(name: 'id') int? id,
       @JsonKey(name: 'original_language') String? originalLanguage,
       @JsonKey(name: 'original_title') String? originalTitle,
       @JsonKey(name: 'overview') String? overview,
       @JsonKey(name: 'popularity') double? popularity,
-      @JsonKey(name: 'poster_path') String? posterPath,
+      @JsonKey(name: 'poster_path') String posterPath = '',
       @JsonKey(name: 'release_date') String? releaseDate,
-      @JsonKey(name: 'title') String? title,
+      @JsonKey(name: 'title') String title = '',
       @JsonKey(name: 'video') bool? video,
-      @JsonKey(name: 'vote_average') double? voteAverage,
+      @JsonKey(name: 'vote_average') double voteAverage = 0,
       @JsonKey(name: 'vote_count') int? voteCount}) {
     return _Results(
       adult: adult,
@@ -80,15 +80,15 @@ mixin _$Results {
   @JsonKey(name: 'popularity')
   double? get popularity => throw _privateConstructorUsedError;
   @JsonKey(name: 'poster_path')
-  String? get posterPath => throw _privateConstructorUsedError;
+  String get posterPath => throw _privateConstructorUsedError;
   @JsonKey(name: 'release_date')
   String? get releaseDate => throw _privateConstructorUsedError;
   @JsonKey(name: 'title')
-  String? get title => throw _privateConstructorUsedError;
+  String get title => throw _privateConstructorUsedError;
   @JsonKey(name: 'video')
   bool? get video => throw _privateConstructorUsedError;
   @JsonKey(name: 'vote_average')
-  double? get voteAverage => throw _privateConstructorUsedError;
+  double get voteAverage => throw _privateConstructorUsedError;
   @JsonKey(name: 'vote_count')
   int? get voteCount => throw _privateConstructorUsedError;
 
@@ -110,11 +110,11 @@ abstract class $ResultsCopyWith<$Res> {
       @JsonKey(name: 'original_title') String? originalTitle,
       @JsonKey(name: 'overview') String? overview,
       @JsonKey(name: 'popularity') double? popularity,
-      @JsonKey(name: 'poster_path') String? posterPath,
+      @JsonKey(name: 'poster_path') String posterPath,
       @JsonKey(name: 'release_date') String? releaseDate,
-      @JsonKey(name: 'title') String? title,
+      @JsonKey(name: 'title') String title,
       @JsonKey(name: 'video') bool? video,
-      @JsonKey(name: 'vote_average') double? voteAverage,
+      @JsonKey(name: 'vote_average') double voteAverage,
       @JsonKey(name: 'vote_count') int? voteCount});
 }
 
@@ -179,7 +179,7 @@ class _$ResultsCopyWithImpl<$Res> implements $ResultsCopyWith<$Res> {
       posterPath: posterPath == freezed
           ? _value.posterPath
           : posterPath // ignore: cast_nullable_to_non_nullable
-              as String?,
+              as String,
       releaseDate: releaseDate == freezed
           ? _value.releaseDate
           : releaseDate // ignore: cast_nullable_to_non_nullable
@@ -187,7 +187,7 @@ class _$ResultsCopyWithImpl<$Res> implements $ResultsCopyWith<$Res> {
       title: title == freezed
           ? _value.title
           : title // ignore: cast_nullable_to_non_nullable
-              as String?,
+              as String,
       video: video == freezed
           ? _value.video
           : video // ignore: cast_nullable_to_non_nullable
@@ -195,7 +195,7 @@ class _$ResultsCopyWithImpl<$Res> implements $ResultsCopyWith<$Res> {
       voteAverage: voteAverage == freezed
           ? _value.voteAverage
           : voteAverage // ignore: cast_nullable_to_non_nullable
-              as double?,
+              as double,
       voteCount: voteCount == freezed
           ? _value.voteCount
           : voteCount // ignore: cast_nullable_to_non_nullable
@@ -218,11 +218,11 @@ abstract class _$ResultsCopyWith<$Res> implements $ResultsCopyWith<$Res> {
       @JsonKey(name: 'original_title') String? originalTitle,
       @JsonKey(name: 'overview') String? overview,
       @JsonKey(name: 'popularity') double? popularity,
-      @JsonKey(name: 'poster_path') String? posterPath,
+      @JsonKey(name: 'poster_path') String posterPath,
       @JsonKey(name: 'release_date') String? releaseDate,
-      @JsonKey(name: 'title') String? title,
+      @JsonKey(name: 'title') String title,
       @JsonKey(name: 'video') bool? video,
-      @JsonKey(name: 'vote_average') double? voteAverage,
+      @JsonKey(name: 'vote_average') double voteAverage,
       @JsonKey(name: 'vote_count') int? voteCount});
 }
 
@@ -288,7 +288,7 @@ class __$ResultsCopyWithImpl<$Res> extends _$ResultsCopyWithImpl<$Res>
       posterPath: posterPath == freezed
           ? _value.posterPath
           : posterPath // ignore: cast_nullable_to_non_nullable
-              as String?,
+              as String,
       releaseDate: releaseDate == freezed
           ? _value.releaseDate
           : releaseDate // ignore: cast_nullable_to_non_nullable
@@ -296,7 +296,7 @@ class __$ResultsCopyWithImpl<$Res> extends _$ResultsCopyWithImpl<$Res>
       title: title == freezed
           ? _value.title
           : title // ignore: cast_nullable_to_non_nullable
-              as String?,
+              as String,
       video: video == freezed
           ? _value.video
           : video // ignore: cast_nullable_to_non_nullable
@@ -304,7 +304,7 @@ class __$ResultsCopyWithImpl<$Res> extends _$ResultsCopyWithImpl<$Res>
       voteAverage: voteAverage == freezed
           ? _value.voteAverage
           : voteAverage // ignore: cast_nullable_to_non_nullable
-              as double?,
+              as double,
       voteCount: voteCount == freezed
           ? _value.voteCount
           : voteCount // ignore: cast_nullable_to_non_nullable
@@ -318,18 +318,18 @@ class __$ResultsCopyWithImpl<$Res> extends _$ResultsCopyWithImpl<$Res>
 class _$_Results implements _Results {
   _$_Results(
       {@JsonKey(name: 'adult') this.adult,
-      @JsonKey(name: 'backdrop_path') this.backdropPath,
+      @JsonKey(name: 'backdrop_path') this.backdropPath = '',
       @JsonKey(name: 'genre_ids') this.genreIds,
       @JsonKey(name: 'id') this.id,
       @JsonKey(name: 'original_language') this.originalLanguage,
       @JsonKey(name: 'original_title') this.originalTitle,
       @JsonKey(name: 'overview') this.overview,
       @JsonKey(name: 'popularity') this.popularity,
-      @JsonKey(name: 'poster_path') this.posterPath,
+      @JsonKey(name: 'poster_path') this.posterPath = '',
       @JsonKey(name: 'release_date') this.releaseDate,
-      @JsonKey(name: 'title') this.title,
+      @JsonKey(name: 'title') this.title = '',
       @JsonKey(name: 'video') this.video,
-      @JsonKey(name: 'vote_average') this.voteAverage,
+      @JsonKey(name: 'vote_average') this.voteAverage = 0,
       @JsonKey(name: 'vote_count') this.voteCount});
 
   factory _$_Results.fromJson(Map<String, dynamic> json) =>
@@ -361,19 +361,19 @@ class _$_Results implements _Results {
   final double? popularity;
   @override
   @JsonKey(name: 'poster_path')
-  final String? posterPath;
+  final String posterPath;
   @override
   @JsonKey(name: 'release_date')
   final String? releaseDate;
   @override
   @JsonKey(name: 'title')
-  final String? title;
+  final String title;
   @override
   @JsonKey(name: 'video')
   final bool? video;
   @override
   @JsonKey(name: 'vote_average')
-  final double? voteAverage;
+  final double voteAverage;
   @override
   @JsonKey(name: 'vote_count')
   final int? voteCount;
@@ -466,11 +466,11 @@ abstract class _Results implements Results {
       @JsonKey(name: 'original_title') String? originalTitle,
       @JsonKey(name: 'overview') String? overview,
       @JsonKey(name: 'popularity') double? popularity,
-      @JsonKey(name: 'poster_path') String? posterPath,
+      @JsonKey(name: 'poster_path') String posterPath,
       @JsonKey(name: 'release_date') String? releaseDate,
-      @JsonKey(name: 'title') String? title,
+      @JsonKey(name: 'title') String title,
       @JsonKey(name: 'video') bool? video,
-      @JsonKey(name: 'vote_average') double? voteAverage,
+      @JsonKey(name: 'vote_average') double voteAverage,
       @JsonKey(name: 'vote_count') int? voteCount}) = _$_Results;
 
   factory _Results.fromJson(Map<String, dynamic> json) = _$_Results.fromJson;
@@ -501,19 +501,19 @@ abstract class _Results implements Results {
   double? get popularity => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'poster_path')
-  String? get posterPath => throw _privateConstructorUsedError;
+  String get posterPath => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'release_date')
   String? get releaseDate => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'title')
-  String? get title => throw _privateConstructorUsedError;
+  String get title => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'video')
   bool? get video => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'vote_average')
-  double? get voteAverage => throw _privateConstructorUsedError;
+  double get voteAverage => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'vote_count')
   int? get voteCount => throw _privateConstructorUsedError;

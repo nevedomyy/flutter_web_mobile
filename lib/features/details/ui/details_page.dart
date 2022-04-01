@@ -1,6 +1,6 @@
 import 'package:flutter/foundation.dart' show kIsWeb;
+import 'package:flutter_bloc/flutter_bloc.dart' show BlocProvider;
 import 'package:flutter/material.dart';
-import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_web/core/injections/injection.dart';
 import 'package:flutter_web/features/details/bloc/details_bloc.dart';
 

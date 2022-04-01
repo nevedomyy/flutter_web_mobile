@@ -9,7 +9,7 @@ part of 'movie.dart';
 _$_Movie _$_$_MovieFromJson(Map<String, dynamic> json) {
   return _$_Movie(
     adult: json['adult'] as bool?,
-    backdropPath: json['backdrop_path'] as String?,
+    backdropPath: json['backdrop_path'] as String,
     belongsToCollection: json['belongs_to_collection'],
     budget: json['budget'] as int?,
     genres: (json['genres'] as List<dynamic>?)
@@ -20,9 +20,9 @@ _$_Movie _$_$_MovieFromJson(Map<String, dynamic> json) {
     imdbId: json['imdb_id'] as String?,
     originalLanguage: json['original_language'] as String?,
     originalTitle: json['original_title'] as String?,
-    overview: json['overview'] as String?,
+    overview: json['overview'] as String,
     popularity: (json['popularity'] as num?)?.toDouble(),
-    posterPath: json['poster_path'] as String?,
+    posterPath: json['poster_path'] as String,
     productionCompanies: (json['production_companies'] as List<dynamic>?)
         ?.map((e) => ProductionCompanies.fromJson(e as Map<String, dynamic>))
         .toList(),
@@ -37,7 +37,7 @@ _$_Movie _$_$_MovieFromJson(Map<String, dynamic> json) {
         .toList(),
     status: json['status'] as String?,
     tagline: json['tagline'] as String?,
-    title: json['title'] as String?,
+    title: json['title'] as String,
     video: json['video'] as bool?,
     voteAverage: (json['vote_average'] as num?)?.toDouble(),
     voteCount: json['vote_count'] as int?,

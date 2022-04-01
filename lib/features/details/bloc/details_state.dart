@@ -1,30 +1,14 @@
 part of 'details_bloc.dart';
 
-abstract class DetailsState extends Equatable {
-  const DetailsState();
+@freezed
+class DetailsState with _$DetailsState {
+  const factory DetailsState.initial() = _DetailsInitialState;
 
-  @override
-  List<Object> get props => [];
-}
+  const factory DetailsState.loading() = _DetailsLoadingState;
 
-class DetailsInitial extends DetailsState {}
+  const factory DetailsState.loaded({required Movie movie}) =
+      _DetailsLoadedState;
 
-class DetailsLoadingState extends DetailsState {}
-
-class DetailsLoadedState extends DetailsState {
-  final Movie movie;
-
-  const DetailsLoadedState({required this.movie});
-
-  @override
-  List<Object> get props => [movie];
-}
-
-class DetailsErrorState extends DetailsState {
-  final String message;
-
-  const DetailsErrorState({required this.message});
-
-  @override
-  List<Object> get props => [message];
+  const factory DetailsState.error({required String message}) =
+      _DetailsErrorState;
 }
