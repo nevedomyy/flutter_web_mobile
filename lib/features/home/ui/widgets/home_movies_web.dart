@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 
 import 'package:flutter_web/core/api/end_points.dart';
 import 'package:flutter_web/core/navigation/app_navigator.dart';
+import 'package:flutter_web/core/navigation/app_pages.dart';
 import 'package:flutter_web/features/home/models/movies.dart';
 
 class HomeMoviesWeb extends StatelessWidget {
@@ -26,7 +27,7 @@ class HomeMoviesWeb extends StatelessWidget {
             return GestureDetector(
               onTap: () {
                 navigator.push(
-                  '/details',
+                  AppPages.details,
                   arguments: movies.results[itemIndex].id,
                 );
               },
@@ -97,7 +98,7 @@ class HomeMoviesWeb extends StatelessWidget {
               return GestureDetector(
                 onTap: () {
                   navigator.push(
-                    '/details',
+                    AppPages.details,
                     arguments: movies.results[index].id,
                   );
                 },

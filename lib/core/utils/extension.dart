@@ -5,3 +5,8 @@ extension BuildContextExtension on BuildContext {
   /// bloc => BlocProvider.of<XxxBloc>(context)
   T bloc<T extends BlocBase>() => BlocProvider.of<T>(this);
 }
+
+extension StringExtension on String {
+  /// remove "/" at start
+  String get toPage => substring(1);
+}

@@ -1,0 +1,16 @@
+body, html {
+  margin:0;
+  height:100%;
+  background: #252526;
+  
+  background-size: 100% 100%;
+}
+
+.center {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}

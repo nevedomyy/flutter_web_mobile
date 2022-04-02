@@ -1,13 +1,16 @@
-import 'package:flutter/foundation.dart';
+import 'package:flutter/foundation.dart' show ChangeNotifier;
 import 'package:flutter/material.dart';
+
 import 'package:flutter_web/core/global/keys.dart';
+import 'package:flutter_web/core/navigation/app_pages.dart';
+import 'package:flutter_web/core/utils/extension.dart';
 
 import 'app_config.dart';
 import 'app_routes.dart';
 
 class AppNavigator extends RouterDelegate<AppConfig>
     with ChangeNotifier, PopNavigatorRouterDelegateMixin<AppConfig> {
-  final List<Page> _pages = [AppRoutes.getPage('/')];
+  final List<Page> _pages = [AppRoutes.getPage(AppPages.home)];
 
   List<Page> get pages => List.unmodifiable(_pages);
 
@@ -25,26 +28,27 @@ class AppNavigator extends RouterDelegate<AppConfig>
         id: _pages.last.arguments as int,
       );
     }
-    return AppConfig(_pages.last.name ?? '/blankPage');
+    return AppConfig(_pages.last.name ?? AppPages.blank);
   }
 
   @override
   Future<void> setNewRoutePath(AppConfig configuration) async {
     final uri = Uri.parse(configuration.path);
     if (uri.pathSegments.isEmpty) {
-      _pages.add(AppRoutes.getPage('/'));
+      _pages.add(AppRoutes.getPage(AppPages.home));
     }
     if (uri.pathSegments.length == 1) {
       if (configuration.id != null) {
-        if (uri.pathSegments[0].startsWith('details')) {
-          if (_pages.length > 1 && _pages[1].name!.contains('/details')) {
+        if (uri.pathSegments[0] == AppPages.details.toPage) {
+          if (_pages.length > 1 && _pages[1].name == AppPages.details) {
             _pages.removeLast();
           }
-          _pages
-              .add(AppRoutes.getPage('/details', arguments: configuration.id));
+          _pages.add(
+            AppRoutes.getPage(AppPages.details, arguments: configuration.id),
+          );
         }
       } else {
-        _pages.add(AppRoutes.getPage('/blankPage'));
+        _pages.add(AppRoutes.getPage(AppPages.blank));
       }
     }
     while (uri.pathSegments.length < _pages.length - 1) {
